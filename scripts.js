@@ -71,8 +71,8 @@ function checkRPS(userInput) {
   console.log(score);
   document.querySelector(".js-result").innerHTML = ` ${result}`;
   document.querySelector(".js-moves").innerHTML = `You 
-<img src="image/${userInput}-emoji.png" class="move-icon">
-<img src="image/${randomPick}-emoji.png" class="move-icon">
+<img src="Image/${userInput}-emoji.png" class="move-icon">
+<img src="Image/${randomPick}-emoji.png" class="move-icon">
 Computer`;
 
   updateScore();
