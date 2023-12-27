@@ -27,6 +27,9 @@ document.querySelector(".js-scissor-button").addEventListener("click", () => {
 
 let isAutoPlaying = false;
 let intervalId;
+var autoPlayButton = document.querySelector(".js-autoplay");
+autoPlayButton.innerHTML = "Auto Play";
+autoPlayButton.style.backgroundColor = "green";
 function autoPlay() {
   if (!isAutoPlaying) {
     intervalId = setInterval(function () {
@@ -34,9 +37,13 @@ function autoPlay() {
       checkRPS(playerMove);
     }, 1000);
     isAutoPlaying = true;
+    autoPlayButton.innerHTML = "Pause";
+    autoPlayButton.style.backgroundColor = "red";
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    autoPlayButton.innerHTML = "Auto Play";
+    autoPlayButton.style.backgroundColor = "green";
   }
 }
 
